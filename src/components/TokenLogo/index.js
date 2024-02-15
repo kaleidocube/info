@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { isAddress } from '../../utils/index.js'
-import EthereumLogo from '../../assets/eth.png'
 
 const BAD_IMAGES = {}
 
@@ -48,22 +47,20 @@ export default function TokenLogo({ address, header = false, size = '24px', ...r
   }
 
   // hard coded fixes for trust wallet api issues
-  if (address?.toLowerCase() === '0x5e74c9036fb86bd7ecdcb084a0673efc32ea31cb') {
-    address = '0x42456d7084eacf4083f1140d3229471bba2949a8'
+  if (address?.toLowerCase() === '0x300a7b57dc85b6a9776e249614abf0fe5c9905fb') {
+    // usdc
+    address = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48'
   }
 
-  if (address?.toLowerCase() === '0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f') {
-    address = '0xc011a72400e58ecd99ee497cf89e3775d4bd732f'
-  }
-
-  if (address?.toLowerCase() === '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2') {
+  if (address?.toLowerCase() === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8') {
     return (
       <StyledEthereumLogo size={size} {...rest}>
         <img
-          src={EthereumLogo}
+          src={
+            'https://www.gitbook.com/cdn-cgi/image/width=36,dpr=2,height=36,fit=contain,format=auto/https%3A%2F%2F4122358061-files.gitbook.io%2F~%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FhE4weeNpCJSNUXnecN1R%252Ficon%252FIhHPLpW7N7dB59PIZfmM%252Ficon%2520transparent%2520256w.png%3Falt%3Dmedia%26token%3D3f656b6f-c557-4f82-ae23-f610a870c0ab'
+          }
           style={{
             boxShadow: '0px 6px 10px rgba(0, 0, 0, 0.075)',
-            borderRadius: '24px',
           }}
           alt=""
         />
