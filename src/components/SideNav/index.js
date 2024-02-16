@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React from 'react'
 import styled from 'styled-components'
 import { AutoColumn } from '../Column'
@@ -59,20 +60,20 @@ const MobileWrapper = styled.div`
   align-items: center;
 `
 
-// const HeaderText = styled.div`
-//   margin-right: 0.75rem;
-//   font-size: 0.825rem;
-//   font-weight: 500;
-//   display: inline-box;
-//   display: -webkit-inline-box;
-//   opacity: 0.8;
-//   :hover {
-//     opacity: 1;
-//   }
-//   a {
-//     color: ${({ theme }) => theme.white};
-//   }
-// `
+const HeaderText = styled.div`
+  margin-right: 0.75rem;
+  font-size: 0.825rem;
+  font-weight: 500;
+  display: inline-box;
+  display: -webkit-inline-box;
+  opacity: 0.8;
+  :hover {
+    opacity: 1;
+  }
+  a {
+    color: ${({ theme }) => theme.white};
+  }
+`
 
 const Polling = styled.div`
   position: fixed;
@@ -162,11 +163,24 @@ function SideNav({ history }) {
             )}
           </AutoColumn>
           <AutoColumn gap="0.5rem" style={{ marginLeft: '.75rem', marginBottom: '4rem' }}>
-            {/* <HeaderText>
-              <Link href="https://twitter.com/UniswapProtocol" target="_blank">
-                Twitter
-              </Link>
-            </HeaderText> */}
+            <div
+              style={{
+                display: 'flex',
+                gap: '12px',
+              }}
+            >
+              <HeaderText>
+                <a href="https://twitter.com/kaleidocube_xyz" target="_blank">
+                  Twitter
+                </a>
+              </HeaderText>
+              <HeaderText>
+                <a href="https://t.me/kaleidocube_xyz" target="_blank">
+                  Telegram
+                </a>
+              </HeaderText>
+            </div>
+
             <Toggle isActive={isDark} toggle={toggleDarkMode} />
           </AutoColumn>
           {!below1180 && (
