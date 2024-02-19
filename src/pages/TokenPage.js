@@ -181,7 +181,7 @@ function TokenPage({ address, history }) {
             </TYPE.light>
             <Link
               external={true}
-              href={'https://explorer.xai-chain.net/address/' + address}
+              href={process.env.REACT_APP_EXPLORER_URI + '/address/' + address}
             >{`More about ${shortenAddress(address)}`}</Link>
           </AutoColumn>
         </BlockedMessageWrapper>
@@ -208,7 +208,7 @@ function TokenPage({ address, history }) {
               style={{ width: 'fit-content' }}
               color={backgroundColor}
               external
-              href={'https://explorer.xai-chain.net/address/' + address}
+              href={process.env.REACT_APP_EXPLORER_URI + '/address/' + address}
             >
               <Text style={{ marginLeft: '.15rem' }} fontSize={'14px'} fontWeight={400}>
                 ({address.slice(0, 8) + '...' + address.slice(36, 42)})
@@ -421,7 +421,11 @@ function TokenPage({ address, history }) {
                     </AutoRow>
                   </Column>
                   <ButtonLight color={backgroundColor}>
-                    <Link color={backgroundColor} external href={'https://explorer.xai-chain.net/address/' + address}>
+                    <Link
+                      color={backgroundColor}
+                      external
+                      href={process.env.REACT_APP_EXPLORER_URI + '/address/' + address}
+                    >
                       View on Explorer ↗
                     </Link>
                   </ButtonLight>

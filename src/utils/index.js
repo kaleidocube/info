@@ -303,10 +303,10 @@ export const setThemeColor = (theme) => document.documentElement.style.setProper
 export const Big = (number) => new BigNumber(number)
 
 export const urls = {
-  showTransaction: (tx) => `https://explorer.xai-chain.net//tx/${tx}/`,
-  showAddress: (address) => `https://explorer.xai-chain.net//address/${address}/`,
-  showToken: (address) => `https://explorer.xai-chain.net//token/${address}/`,
-  showBlock: (block) => `https://explorer.xai-chain.net//block/${block}/`,
+  showTransaction: (tx) => `${process.env.REACT_APP_EXPLORER_URI}/tx/${tx}/`,
+  showAddress: (address) => `${process.env.REACT_APP_EXPLORER_URI}/address/${address}/`,
+  showToken: (address) => `${process.env.REACT_APP_EXPLORER_URI}/token/${address}/`,
+  showBlock: (block) => `${process.env.REACT_APP_EXPLORER_URI}/block/${block}/`,
 }
 
 export const formatTime = (unix) => {

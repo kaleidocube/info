@@ -205,7 +205,7 @@ function PairPage({ pairAddress, history }) {
             </TYPE.light>
             <Link
               external={true}
-              href={'https://explorer.xai-chain.net/address/' + pairAddress}
+              href={process.env.REACT_APP_EXPLORER_URI + '/address/' + pairAddress}
             >{`More about ${shortenAddress(pairAddress)}`}</Link>
           </AutoColumn>
         </BlockedMessageWrapper>
@@ -504,7 +504,7 @@ function PairPage({ pairAddress, history }) {
                     <Link
                       color={backgroundColor}
                       external
-                      href={'https://explorer.xai-chain.net/address/' + pairAddress}
+                      href={process.env.REACT_APP_EXPLORER_URI + '/address/' + pairAddress}
                     >
                       View on Explorer ↗
                     </Link>
