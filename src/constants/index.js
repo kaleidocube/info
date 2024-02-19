@@ -34,7 +34,7 @@ export const BLOCKED_WARNINGS = {
  */
 export const FEE_WARNING_TOKENS = []
 
-export const UNTRACKED_COPY = 'Derived USD values may be inaccurate without liquid stablecoin or XAI pairings.'
+export const UNTRACKED_COPY = 'Derived USD values may be inaccurate without liquid stablecoin or ETH pairings.'
 
 // pairs that should be tracked but arent due to lag in subgraph
 export const TRACKED_OVERRIDES_PAIRS = []
