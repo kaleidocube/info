@@ -121,7 +121,7 @@ function App() {
         Object.keys(globalData).length > 0 &&
         globalChartData &&
         Object.keys(globalChartData).length > 0 ? (
-          <BrowserRouter>
+          <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Route component={GoogleAnalyticsReporter} />
             <Switch>
               <Route
