@@ -42,14 +42,14 @@ export function getPoolLink(token0Address, token1Address = null, remove = false)
     return (
       `https://dex.kaleidocube.xyz/#/` +
       (remove ? `remove` : `add`) +
-      `/v2/${token0Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'ETH' : token0Address}/${'ETH'}`
+      `/v2/${token0Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'XAI' : token0Address}/${'XAI'}`
     )
   } else {
     return (
       `https://dex.kaleidocube.xyz/#/` +
       (remove ? `remove` : `add`) +
-      `/v2/${token0Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'ETH' : token0Address}/${
-        token1Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'ETH' : token1Address
+      `/v2/${token0Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'XAI' : token0Address}/${
+        token1Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'XAI' : token1Address
       }`
     )
   }
@@ -60,13 +60,13 @@ export function getSwapLink(token0Address, token1Address = null) {
     return `https://dex.kaleidocube.xyz/#/swap?inputCurrency=${token0Address}`
   } else {
     return `https://dex.kaleidocube.xyz/#/swap?inputCurrency=${
-      token0Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'ETH' : token0Address
-    }&outputCurrency=${token1Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'ETH' : token1Address}`
+      token0Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'XAI' : token0Address
+    }&outputCurrency=${token1Address === '0x36be1fd6ff2a6beb34b500a04f89103a524516d8' ? 'XAI' : token1Address}`
   }
 }
 
 export function getMiningPoolLink(token0Address) {
-  return `https://dex.kaleidocube.xyz/#/uni/ETH/${token0Address}`
+  return `https://dex.kaleidocube.xyz/#/uni/XAI/${token0Address}`
 }
 
 export function getUniswapAppLink(linkVariable) {
@@ -75,7 +75,7 @@ export function getUniswapAppLink(linkVariable) {
     return baseUniswapUrl
   }
 
-  return `${baseUniswapUrl}/ETH/${linkVariable}`
+  return `${baseUniswapUrl}/XAI/${linkVariable}`
 }
 
 export function localNumber(val) {

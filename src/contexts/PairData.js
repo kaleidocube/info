@@ -439,7 +439,7 @@ const getHourlyRateData = async (pairAddress, startTime, latestBlock) => {
 
     const result = await splitQuery(HOURLY_PAIR_RATES, client, [pairAddress], blocks, 100)
 
-    // format token ETH price results
+    // format token XAI price results
     let values = []
     for (var row in result) {
       let timestamp = row.split('t')[1]
