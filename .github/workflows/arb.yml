@@ -2,7 +2,7 @@ name: arb
 
 on:
   push:
-    branches: [arb]
+    branches: [prod]
   workflow_dispatch:
 
 env:

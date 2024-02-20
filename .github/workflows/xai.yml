@@ -2,7 +2,7 @@ name: xai
 
 on:
   push:
-    branches: [xai]
+    branches: [prod]
   workflow_dispatch:
 
 env:
